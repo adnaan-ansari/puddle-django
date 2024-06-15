@@ -83,7 +83,6 @@ TEMPLATES = [
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-print("database url", os.environ.get('DATABASE_URL'))
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -123,7 +122,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+STATIC_ROOT = BASE_DIR
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
